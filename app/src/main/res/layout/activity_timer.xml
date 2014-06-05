@@ -8,9 +8,42 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.tuesdayknightgames.tworoomsandaboom.app.Timer">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/herotworooms"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_previous"
+                android:contentDescription="@string/previous_round"
+                android:id="@+id/back_btn"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_play"
+                android:contentDescription="@string/start_stop"
+                android:id="@+id/go_btn"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_next"
+                android:contentDescription="@string/next_round"
+                android:id="@+id/forward_btn"/>
+
+        </LinearLayout>
+    </Linear>
 
 </RelativeLayout>
