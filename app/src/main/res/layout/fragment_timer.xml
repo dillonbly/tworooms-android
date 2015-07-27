@@ -1,23 +1,59 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TimerFragment">
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp" tools:context=".TimerFragment">
 
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/herotworooms"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal"
-            android:scaleType="centerCrop"
-            />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/boomBackground"
+                android:src="@drawable/herotworooms"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:scaleType="centerCrop">
+            </ImageView>
 
+            <TextView
+                android:id="@+id/countDownText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/boomBackground"
+                android:layout_alignTop="@+id/boomBackground"
+                android:layout_alignRight="@+id/boomBackground"
+                android:layout_alignBottom="@+id/boomBackground"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:text="\nRound 1. Exchange 1 hostage."
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/countDownText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/boomBackground"
+                android:layout_alignTop="@+id/boomBackground"
+                android:layout_alignRight="@+id/boomBackground"
+                android:layout_alignBottom="@+id/boomBackground"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:text="\n\n3:00"
+                android:textColor="#ffffff"
+                android:textSize="38sp"
+                />
+
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
