@@ -25,7 +25,7 @@
             </ImageView>
 
             <TextView
-                android:id="@+id/countDownText"
+                android:id="@+id/hostageText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/boomBackground"
