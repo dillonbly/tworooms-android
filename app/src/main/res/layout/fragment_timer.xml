@@ -35,7 +35,6 @@
                 android:layout_margin="1dp"
                 android:gravity="center"
                 android:text="\nRound 1. Exchange 1 hostage."
-                android:textColor="#ffffff"
                 android:textSize="22sp"
                 />
             <TextView
@@ -49,7 +48,6 @@
                 android:layout_margin="1dp"
                 android:gravity="center"
                 android:text="\n\n3:00"
-                android:textColor="#ffffff"
                 android:textSize="38sp"
                 />
 

@@ -95,10 +95,12 @@ public class TimerFragment extends Fragment {
                 mRoundTimer.pause();
                 Toast toast = Toast.makeText(getActivity(), "Paused", Toast.LENGTH_LONG);
                 toast.show();
+                mGoBtn.setImageResource(R.drawable.ic_action_play);
             } else {
                 mRoundTimer.start();
                 Toast toast = Toast.makeText(getActivity(), "Start!", Toast.LENGTH_LONG);
                 toast.show();
+                mGoBtn.setImageResource(R.drawable.ic_action_pause);
             }
         }
     }

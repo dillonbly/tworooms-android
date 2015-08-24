@@ -12,11 +12,14 @@
     <string name="num_minutes">Minutes</string>
 
     <string-array name="round_options">
-        <string name="one_round">1 Round</string>
-        <string name="two_round">2 Rounds</string>
-        <string name="three_round">3 Rounds</string>
-        <string name="four_round">4 Rounds</string>
-        <string name="five_round">5 Rounds</string>
+        <item name="one_round">1 Round</item>
+        <item name="two_round">2 Rounds</item>
+        <item name="three_round">3 Rounds</item>
+        <item name="four_round">4 Rounds</item>
+        <item name="five_round">5 Rounds</item>
     </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
