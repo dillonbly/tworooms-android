@@ -6,6 +6,17 @@
     <string name="previous_round">Previous Round</string>
     <string name="next_round">Next Round</string>
     <string name="start_stop">Start or Stop</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="num_rounds">Number of Rounds</string>
+    <string name="num_hostages">Hostages</string>
+    <string name="num_minutes">Minutes</string>
 
+    <string-array name="round_options">
+        <string name="one_round">1 Round</string>
+        <string name="two_round">2 Rounds</string>
+        <string name="three_round">3 Rounds</string>
+        <string name="four_round">4 Rounds</string>
+        <string name="five_round">5 Rounds</string>
+    </string-array>
 
 </resources>
