@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.NumberPicker;
 
 
 /**
@@ -18,14 +19,16 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class RoundSettingFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+    // the fragment initialization parameters
     private static final String NUM_MINUTES = "numMinutes";
     private static final String NUM_HOSTAGES = "numHostages";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private NumberPicker mNumMinutesPicker;
+    private NumberPicker mNumHostagesPicker;
+
+    private int mNumMinutes;
+    private int mNumHostages;
 
     private OnFragmentInteractionListener mListener;
 
@@ -37,11 +40,11 @@ public class RoundSettingFragment extends Fragment {
      * @param numHostages Number of hostages for the round
      * @return A new instance of fragment RoundSettingFragment.
      */
-    public static RoundSettingFragment newInstance(int numMinutes, String numHostages) {
+    public static RoundSettingFragment newInstance(int numMinutes, int numHostages) {
         RoundSettingFragment fragment = new RoundSettingFragment();
         Bundle args = new Bundle();
-        args.putString(NUM_MINUTES, numMinutes);
-        args.putString(NUM_HOSTAGES, numHostages);
+        args.putInt(NUM_MINUTES, numMinutes);
+        args.putInt(NUM_HOSTAGES, numHostages);
         fragment.setArguments(args);
         return fragment;
     }
@@ -50,12 +53,18 @@ public class RoundSettingFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public GameSettings.RoundSettings getRoundSettings() {
+        return new GameSettings.RoundSettings(
+                mNumMinutesPicker.getValue(),
+                mNumHostagesPicker.getValue());
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mNumMinutes = getArguments().getInt(NUM_MINUTES);
+            mNumHostages = getArguments().getInt(NUM_HOSTAGES);
         }
     }
 
@@ -63,7 +72,10 @@ public class RoundSettingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_round_setting, container, false);
+        View view = inflater.inflate(R.layout.fragment_round_setting, container, false);
+        mNumMinutesPicker = (NumberPicker) view.findViewById(R.id.num_minute_picker);
+        mNumHostagesPicker = (NumberPicker) view.findViewById(R.id.num_hostage_picker);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

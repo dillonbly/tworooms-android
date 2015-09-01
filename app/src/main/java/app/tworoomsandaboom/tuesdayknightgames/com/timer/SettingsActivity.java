@@ -9,10 +9,20 @@ import android.view.MenuItem;
 
 public class SettingsActivity extends ActionBarActivity {
 
+    private GameSettings gameSettings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        if (gameSettings == null) {
+            gameSettings = GameSettings.newBuilder()
+                .addRound(new GameSettings.RoundSettings(3, 1))
+                .addRound(new GameSettings.RoundSettings(2, 1))
+                .addRound(new GameSettings.RoundSettings(1, 1))
+                .build();
+        }
     }
 
 
